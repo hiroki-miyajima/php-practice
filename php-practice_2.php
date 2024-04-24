@@ -2,16 +2,13 @@
 // Q1 tic-tac問題
 for($i = 1; $i<=100; $i++) {
   if ($i % 5 ===0 && $i % 4 === 0){
-  echo "tic-tac"."\n";
-  }
-  elseif ($i % 5 ===0) {
-  echo "tac"."\n" ;
-  }
-  elseif ($i % 4 === 0) {
-  echo "tic"."\n" ;
-  }
-  else {
-  echo $i."\n";
+    echo "tic-tac"."\n";
+  }elseif ($i % 5 ===0) {
+    echo "tac"."\n" ;
+  }elseif ($i % 4 === 0) {
+    echo "tic"."\n" ;
+  }else {
+    echo $i."\n";
   }
 }
 // Q2 多次元連想配列
@@ -131,6 +128,5 @@ echo $date->format('Y-m-d');
 // 問題２
 $now = new DateTime("2024 -4-23");
 $past = new DateTime("1992 -4-25");
-$diff = $now->diff($past);
-echo "あの日から{$diff->format("%a")}日経過しました。";
+echo "あの日から{$now->diff($past)->format("%a")}日経過しました。";
 ?>

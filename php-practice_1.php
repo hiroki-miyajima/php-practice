@@ -1,8 +1,8 @@
 <?php
 // Q1 変数と文字列
-$name = "「安藤」";
-$Myname = "私の名前は".$name."です。";
-echo ($Myname);
+$name = "安藤";
+$Myname = "私の名前は「".$name."」です。";
+echo $Myname;
 // Q2 四則演算
 $num = 5*4;
 echo $num;
@@ -22,13 +22,8 @@ else {
   echo "どちらでもありません。";
 }
 // Q5 条件分岐-2 三項演算子
-$age = 17;
-if ($age < 18) {
-    $message = "未成年です。";
-}
-if ($age >= 18){
-    $message = "成人です。";
-}
+$age = 18;
+$message = ($age < 18)?"未成年です。":"成人です。";
 echo $message;
 // Q6 配列
 $prefecture = ["茨城県","埼玉県","群馬県","栃木県","千葉県","神奈川県","東京都"];
@@ -90,11 +85,10 @@ foreach ($array as $x => $y) {
 
 // Q10 関数-1
 function hello($name){
-  echo $name."さん、こんにちは。";
+  return $name."さん、こんにちは。";
 }
-hello("金谷");
-hello("安藤");
-
+echo hello("金谷");
+echo hello("安藤");
 // Q11 関数-2
 function calcTaxInPrice($price){
     
@@ -125,22 +119,17 @@ function evaluateGrade($test) {
       case 'A':
       case 'B':
           return '合格です'."\n";
-          break;
   
       case 'C':
           return '合格ですが追加課題があります。'."\n";
-          break;
   
       case 'D':
           return '不合格です。'."\n";
-          break;
   
       default:
           return '判定不明です。講師に問い合わせてください。';
-          break;
   }
-  }
-  
+}
   echo evaluateGrade('A');
   echo evaluateGrade('あ');
 ?>
