@@ -122,8 +122,7 @@ $yamada->attend('PHP');
 // Q5 定義済みクラス
 // 問題１
 $date = new DateTime("2024 -4-23");
-$date->modify('-1 month');
-echo $date->format('Y-m-d');
+echo $date->modify('-1 month')->format('Y-m-d');
 
 // 問題２
 $now = new DateTime("2024 -4-23");
